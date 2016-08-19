@@ -1,5 +1,3 @@
-// echo "hi" | gpg -ae -r $GPGKEY
-
 import 'gnupg_base.dart' as base;
 import 'pub_key.dart' as pubkey;
 import 'dart:io';
