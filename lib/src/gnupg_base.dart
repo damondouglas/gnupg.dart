@@ -11,9 +11,9 @@ abstract class GnupgCommand {
   List get baseArgs;
   String get pathToGnupg => which.whichSync(EXECUTABLE);
   Future<Stdout> run(List addtlArgs) => new Future(() async {
-    var args = new List.from(baseArgs);
-    args.addAll(addtlArgs);
-    var result = await Process.run(pathToGnupg, args);
-    return result.stdout;
-  });
+        var args = new List.from(baseArgs);
+        args.addAll(addtlArgs);
+        var result = await Process.run(pathToGnupg, args);
+        return result.stdout;
+      });
 }

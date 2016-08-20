@@ -23,7 +23,5 @@ void main() {
 }
 
 class MockCommand extends GnupgCommand {
-  final baseArgs = [
-    '--list-keys'
-  ];
+  final baseArgs = ['--list-keys'];
 }
