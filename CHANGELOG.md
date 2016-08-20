@@ -4,3 +4,4 @@
 
 - Initial version, created by Stagehand
 - Implemented encryption.
+- Implemented decryption.

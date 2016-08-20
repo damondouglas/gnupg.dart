@@ -9,5 +9,4 @@ library gnupg;
 export 'src/gnupg_base.dart';
 export 'src/pub_key.dart';
 export 'src/encrypt.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/decrypt.dart';
