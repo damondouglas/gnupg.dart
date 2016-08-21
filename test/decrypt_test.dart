@@ -11,18 +11,20 @@ import 'dart:io';
 void main() {
   group('pub_key', () {
     DecryptCommand command;
-    stdout.writeln("gpg passphrase: ");
-    String passphrase = stdin.readLineSync();
     setUp(() {
       command = new DecryptCommand();
+    });
+
+    test('get passphrase', () async {
+      var passphrase = await command.passphrase;
+      expect(passphrase, isNotEmpty);
     });
 
     test('encrypt', () async {
       var encryptCommand = new EncryptCommand();
       var content = await encryptCommand.encrypt("foo bar baz");
-      var decryptedContent = await command.decrypt(content, passphrase);
-      print(decryptedContent);
-      expect(true, isTrue);
+      var decryptedContent = await command.decrypt(content);
+      expect(decryptedContent, "foo bar baz");
     });
   });
 }
